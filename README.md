@@ -17,3 +17,5 @@ each 10th run will have an additional discount.
 - Each program consists of steps and these steps should be able to be combined into a 
 washing program
 - We need to track all the activities
+
+Front-end technologies include: HTML/HTML5; CSS; JavaScript; EJS (Embedded JavaScript)
