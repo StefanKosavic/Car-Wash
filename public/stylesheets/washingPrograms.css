@@ -1,0 +1,186 @@
+body {
+    font-family: "Times New Roman", Georgia, serif;
+}
+
+a {
+    color: #00B7FF;
+}
+.naslov{
+    text-align: center;
+    color: white;
+    margin: 2% 1% 1% 1%;
+}
+.naslov-this{
+    text-align: center;
+    color: white;
+    margin: 0% 1% 1% 1%;
+}
+
+.background{
+    background-image: url("../images/car2.jpg");
+}
+.container{
+    background: lightblue;
+    display: flex;
+    flex-direction: column;
+    margin: 2% 7% !important;
+    border: 1px solid black;
+    border-radius: 20px;
+    filter: drop-shadow(0px 9px 5px black);
+}
+.container-blank{
+    background: lightblue;
+    display: flex;
+    height: 50% !important;
+    width: 50% !important;
+    flex-direction: column;
+    margin: 1% 24% !important;
+    border: 1px solid black;
+    border-radius: 20px;
+    filter: drop-shadow(0px 9px 5px black);
+}
+.white{
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 6px 9px;
+    text-decoration: none;
+}
+.container-welcome{
+    height: 50vh;
+    background: lightblue;
+    display: flex;
+    flex-direction: column;
+    margin: 10% 15% 5% 15% !important;
+    border: 1px solid black;
+    border-radius: 20px;
+    filter: drop-shadow(0px 9px 5px black);
+}
+.welcomeH1{
+    text-align: center;
+    margin: 10% 5% 0% 5%;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    filter: drop-shadow(0px 4px 2px black);
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 6px 9px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: cornflowerblue;}
+
+ul.topnav li a.active {background-color: cornflowerblue;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+    ul.topnav li.right,
+    ul.topnav li {float: none;}
+}
+.twoInOne{
+    text-align: center;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    margin: 2% 10%;
+    border: 1px solid black;
+    background: white;
+}
+.imagemain{
+    margin: 1%;
+    flex: 1;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+.textmain{
+    margin: 1%;
+    display: flex;
+    flex: 2;
+    border: 1px solid black;
+    background: white;
+    flex-direction: column;
+}
+.textmain-naziv{
+    margin: 1%;
+    flex: 1;
+    background: white;
+}
+.textmain-naziv-glavni{
+    margin: 1%;
+    flex: 1;
+    font-size: 16px;
+    font-weight: bold;
+    background: white;
+}
+.textmain-opis{
+    margin: 1%;
+    flex: 2;
+    background: white;
+}
+.textmain-btn{
+    display: flex;
+    flex-direction: row;
+    margin: 1%;
+    flex: 1;
+    background: white;
+}
+.textmain-btn-prvi{
+    margin: 1%;
+    flex: 1;
+    background: white;
+}
+.textmain-btn-drugi{
+    margin: 1%;
+    flex: 2;
+    background: white;
+}
+.margin{
+    margin: 0.5%;
+}
+.btn-wash{
+    background-color: #1f8dba;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    padding: 1%;
+    cursor: pointer;
+    margin: 1% 1% 1% 35%;
+    border-radius: 4px;
+    width: 30%;
+
+
+}
+.btn-add{
+    background-color: firebrick;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    padding: 1%;
+    cursor: pointer;
+    margin: 1% 1% 1% 35%;
+    border-radius: 4px;
+    width: 30%;
+
+}
+

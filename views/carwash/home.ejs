@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel='stylesheet' href='/stylesheets/home.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function wash(name,price){
+            $.ajax({
+                url:"/carwash/wash/" + name + "/" + price,
+                data:{},
+                type:"post",
+                beforeSend: function (){
+                }
+            }).done(function (data){
+                    window.location.href="/carwash/washing_programs"
+            });
+        }
+        function groupWashing(id){
+            $.ajax({
+                url:"/carwash/add_to_washing_program/" + id,
+                data:{},
+                type:"post",
+                beforeSend: function (){
+                }
+            }).done(function (data){
+                window.location.reload();
+            });
+        }
+
+    </script>
+
+
+</head>
+<body class="background">
+<ul class="topnav">
+    <li><a class="active" href="/carwash/home">Home</a></li>
+    <li><a href="/carwash/washing_programs">Washing programs</a></li>
+    <li><a href="/carwash/activities">Activities</a></li>
+    <li class="right"><a href="/carwash/logout">Log out</a></li>
+    <li class="right"><span class="white">Loyalty level: <%=Math.floor(runs/5) + 1 %></span></li>
+    <li class="right"><span class="white"> User: <%=username%> </span></li>
+
+</ul>
+<h1 class="naslov">Welcome to Ka-Chow</h1>
+<div class="container">
+    <%for(let i=0;i<programs.length;i++){ %>
+        <div class="twoInOne">
+            <div class="imagemain">
+                <img src="/images/<%=programs[i].image%>">
+            </div>
+            <div class="textmain">
+                <div class="textmain-naziv-glavni"><%=programs[i].name%></div>
+                <div class="textmain-naziv">Price: <%=programs[i].price%>$</div>
+                <div class="textmain-opis"><%=programs[i].description%></div>
+                <div class="textmain-btn">
+                    <div class="textmain-btn-prvi">
+                        <button type="button" class="btn-wash" onclick="wash('<%=programs[i].name%>','<%=programs[i].price%>')">Wash</button>
+                    </div>
+                    <div class="textmain-btn-drugi">
+                        <button type="button" class="btn-add" onclick="groupWashing('<%=programs[i].id_washing_program%>')">Add to washing program</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <%}%>
+</div>
+
+</body>
+</html>
+
