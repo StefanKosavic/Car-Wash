@@ -21,5 +21,6 @@ washing program
 Front-end technologies include: HTML/HTML5; CSS; JavaScript; EJS (Embedded JavaScript)
 
 Back-end technologies include: Various frameworks build over programming languages: Node.js
+
 Databases: PostgreSQL 
 
